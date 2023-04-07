@@ -35,23 +35,17 @@ public class Main {
         }
     }
 
-    public static void deliveryCard(int deliveryDistance) {
-
+    public static int deliveryCard(int deliveryDistance) {
+        int day=0;
         System.out.println("Задача 3");
-        int day = 0;
         if (deliveryDistance <= 20) {
-            int deliveryDay = day + 1;
-            System.out.println("Потребуется дней для доставки: " + deliveryDay);
+            return day=1;
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            int deliveryDay = day + 2;
-            System.out.println("Потребуется дней для доставки: " + deliveryDay);
+            return day=2;
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            int deliveryDay = day + 3;
-            System.out.println("Потребуется дней для доставки: " + deliveryDay);
-        } else {
-            System.out.println("Доставки нет!");
-        }
-
+            return day=3;
+       }
+       return day;
     }
     public static void main(String[] args){
         int year = 2000;
@@ -60,7 +54,9 @@ public class Main {
         int deliveryDistance =69;
         calculationYear(year);
         installationApplication(clientOS,yearРroduction);
-        deliveryCard(deliveryDistance);
+        int x= deliveryCard(deliveryDistance);
+        System.out.println(x);
+
 
     }
 }

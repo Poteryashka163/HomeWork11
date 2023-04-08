@@ -39,19 +39,21 @@ public class Main {
         int day=0;
         System.out.println("Задача 3");
         if (deliveryDistance <= 20) {
-            return day=1;
+            return 1;
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            return day=2;
+            return 2;
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            return day=3;
-       }
-       return day;
+            return 3;
+       } else {
+            return 0;
+
+        }
     }
     public static void main(String[] args){
         int year = 2000;
         int clientOS = 1;
         int yearРroduction = LocalDate.now().getYear();
-        int deliveryDistance =69;
+        int deliveryDistance =101;
         calculationYear(year);
         installationApplication(clientOS,yearРroduction);
         int x= deliveryCard(deliveryDistance);
